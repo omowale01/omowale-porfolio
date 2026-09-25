@@ -1,0 +1,151 @@
+.experience {
+  padding: 100px 0;
+  background-color: #f8fafc;
+}
+
+.experience-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  margin-bottom: 50px;
+}
+
+.section-label {
+  color: #0284c7;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.section-heading h2 {
+  color: #0f172a;
+  font-size: 40px;
+  margin: 0 0 15px;
+}
+
+.section-description {
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  padding-left: 35px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background-color: #bae6fd;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -35px;
+  top: 25px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: #0284c7;
+  border: 4px solid #e0f2fe;
+  border-radius: 50%;
+}
+
+.experience-card {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 28px;
+
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.experience-card h3 {
+  color: #0f172a;
+  font-size: 21px;
+  margin: 0 0 5px;
+}
+
+.company {
+  color: #0284c7;
+  font-weight: bold;
+  margin: 0;
+}
+
+.date {
+  color: #475569;
+  background-color: #f1f5f9;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.location {
+  color: #64748b;
+  font-size: 14px;
+  margin: 10px 0 20px;
+}
+
+.experience-card ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.experience-card li {
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+
+  .experience {
+    padding: 70px 0;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .date {
+    align-self: flex-start;
+  }
+
+  .experience-card {
+    padding: 22px;
+  }
+
+}

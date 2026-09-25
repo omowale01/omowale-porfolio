@@ -1,0 +1,101 @@
+<section class="education" id="education">
+
+  <div class="education-container">
+
+    <div class="section-heading">
+      <p class="section-label">MY BACKGROUND</p>
+
+      <h2>Education & Certifications</h2>
+
+      <p class="section-description">
+        My academic background and professional training.
+      </p>
+    </div>
+
+
+    <!-- EDUCATION -->
+
+    <div class="content-section">
+
+      <h3 class="content-title">
+        Education
+      </h3>
+
+      <div class="education-grid">
+
+        @for (item of education; track item.program) {
+
+          <div class="education-card">
+
+            <div class="education-header">
+
+              <h3>
+                {{ item.program }}
+              </h3>
+
+              @if (item.status) {
+                <span class="status">
+                  {{ item.status }}
+                </span>
+              }
+
+            </div>
+
+            <p class="school">
+              {{ item.school }}
+            </p>
+
+            <p class="location">
+              {{ item.location }}
+            </p>
+
+            <p class="date">
+              {{ item.date }}
+            </p>
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+
+    <!-- CERTIFICATIONS -->
+
+    <div class="content-section">
+
+      <h3 class="content-title">
+        Certifications & Training
+      </h3>
+
+      <div class="certificate-grid">
+
+        @for (certificate of certificates; track certificate.name) {
+
+          <div class="certificate-card">
+
+            <h3>
+              {{ certificate.name }}
+            </h3>
+
+            <p>
+              {{ certificate.organization }}
+            </p>
+
+            <span>
+              {{ certificate.date }}
+            </span>
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

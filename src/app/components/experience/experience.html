@@ -1,0 +1,74 @@
+<section class="experience" id="experience">
+
+  <div class="experience-container">
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        MY JOURNEY
+      </p>
+
+      <h2>Professional Experience</h2>
+
+      <p class="section-description">
+        Experience across web development, IT support,
+        operations and customer-facing environments.
+      </p>
+
+    </div>
+
+    <div class="timeline">
+
+      @for (experience of experiences; track experience.title + experience.company) {
+
+        <div class="timeline-item">
+
+          <div class="timeline-marker"></div>
+
+          <div class="experience-card">
+
+            <div class="experience-header">
+
+              <div>
+                <h3>
+                  {{ experience.title }}
+                </h3>
+
+                <p class="company">
+                  {{ experience.company }}
+                </p>
+              </div>
+
+              <span class="date">
+                {{ experience.date }}
+              </span>
+
+            </div>
+
+            <p class="location">
+              {{ experience.location }}
+            </p>
+
+            <ul>
+
+              @for (responsibility of experience.responsibilities; track responsibility) {
+
+                <li>
+                  {{ responsibility }}
+                </li>
+
+              }
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

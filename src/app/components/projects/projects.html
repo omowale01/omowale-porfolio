@@ -1,0 +1,82 @@
+<section class="projects" id="projects">
+
+  <div class="projects-container">
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        MY WORK
+      </p>
+
+      <h2>Featured Projects</h2>
+
+      <p class="section-description">
+        A selection of software and web development projects
+        I've worked on.
+      </p>
+
+    </div>
+
+    <div class="projects-grid">
+
+      @for (project of projects; track project.title) {
+
+        <div class="project-card">
+
+          <div class="project-top">
+
+            <span class="project-icon">
+              &lt;/&gt;
+            </span>
+
+          </div>
+
+          <h3>{{ project.title }}</h3>
+
+          <p class="project-description">
+            {{ project.description }}
+          </p>
+
+          <div class="technologies">
+
+            @for (technology of project.technologies; track technology) {
+
+              <span>
+                {{ technology }}
+              </span>
+
+            }
+
+          </div>
+
+          <div class="project-links">
+
+            <a
+              [href]="project.githubUrl"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Code
+            </a>
+
+            @if (project.liveUrl) {
+
+              <a
+                [href]="project.liveUrl"
+                target="_blank"
+                rel="noopener noreferrer">
+                Live Demo
+              </a>
+
+            }
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

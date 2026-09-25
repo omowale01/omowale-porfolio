@@ -1,0 +1,160 @@
+.navbar {
+  width: 100%;
+  background-color: #0f172a;
+  padding: 18px 0;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #38bdf8;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  list-style: none;
+
+  gap: 25px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 15px;
+
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.resume-button {
+  background-color: #38bdf8;
+  color: #0f172a;
+
+  padding: 10px 20px;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: background-color 0.3s;
+}
+
+.resume-button:hover {
+  background-color: #7dd3fc;
+}
+
+
+/* Hamburger button */
+
+.menu-button {
+  display: none;
+
+  background: none;
+  border: none;
+
+  color: white;
+
+  font-size: 28px;
+
+  cursor: pointer;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+  .menu-button {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    background-color: #0f172a;
+
+    padding: 25px 5%;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    border-top: 1px solid #334155;
+  }
+
+  .navigation.active {
+    display: flex;
+  }
+
+  .nav-links {
+    width: 100%;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+
+    width: 100%;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #1e293b;
+  }
+
+  .resume-button {
+    display: inline-block;
+    margin-top: 5px;
+  }
+
+}
+
