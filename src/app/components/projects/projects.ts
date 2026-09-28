@@ -61,7 +61,7 @@ export class Projects {
     },
 
     {
-      title: 'Lucia Nutri Foods Website',
+      title: 'LuciaNutriFoods Website',
       description:
         'A responsive website project developed to provide an online presence for Lucia Nutri Foods.',
       technologies: [

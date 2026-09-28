@@ -31,7 +31,7 @@ export class Education {
     },
 
     {
-      program: 'Chemistry SCience',
+      program: 'Chemistry Science',
       school: 'University of Lagos',
       location: 'Lagos, Nigeria',
       date: '2017',
