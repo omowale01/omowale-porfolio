@@ -1,11 +1,18 @@
 .skills {
-  padding: 100px 0;
-  background-color: #f8fafc;
+  padding: 110px 0;
+
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(124, 58, 237, 0.06),
+      transparent 30%
+    ),
+    #030617;
 }
 
 .skills-container {
-  width: 90%;
-  max-width: 1200px;
+  width: 92%;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -14,58 +21,61 @@
 }
 
 .section-label {
-  color: #0284c7;
+  color: #8b5cf6;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
 .section-heading h2 {
-  color: #0f172a;
-  font-size: 40px;
-  margin: 0 0 15px;
+  color: #f8fafc;
+  font-size: 42px;
+  margin: 10px 0 15px;
 }
 
 .section-description {
-  color: #64748b;
+  color: #94a3b8;
   font-size: 17px;
-  max-width: 650px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .skills-grid {
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(300px, 1fr));
+    repeat(auto-fit, minmax(250px, 1fr));
 
-  gap: 25px;
+  gap: 22px;
 }
 
 .skill-card {
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
+  padding: 28px;
 
-  border: 1px solid #e2e8f0;
+  background: rgba(15, 23, 42, 0.65);
 
-  transition: transform 0.3s,
-              box-shadow 0.3s;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+
+  border-color: #7c3aed;
 
   box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.08);
+    0 15px 35px rgba(79, 70, 229, 0.12);
 }
 
 .skill-card h3 {
-  color: #0f172a;
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 20px;
+  color: #f8fafc;
+  font-size: 19px;
+  margin: 0 0 20px;
 }
 
 .skill-list {
@@ -74,14 +84,30 @@
   gap: 10px;
 }
 
-.skill-list span {
-  background-color: #e0f2fe;
-  color: #0369a1;
+.skill {
+  display: inline-block;
 
-  padding: 8px 13px;
+  padding: 7px 11px;
 
-  border-radius: 20px;
+  color: #c4b5fd;
 
-  font-size: 14px;
-  font-weight: 500;
+  background: rgba(124, 58, 237, 0.1);
+
+  border: 1px solid rgba(139, 92, 246, 0.25);
+
+  border-radius: 6px;
+
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+
+  .skills {
+    padding: 80px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
 }

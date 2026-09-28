@@ -1,14 +1,9 @@
 <nav class="navbar">
+  <div class="nav-container">
 
-  <div class="container">
-
-    <a
-      class="logo"
-      href="#home"
-      (click)="closeMenu()">
-      Omowale<span>.</span>
+    <a class="logo" href="#home" (click)="closeMenu()">
+      Omowale <span>Obagunwa</span>
     </a>
-
 
     <button
       class="menu-button"
@@ -24,52 +19,26 @@
 
     </button>
 
-
-    <div
-      class="navigation"
-      [class.active]="menuOpen">
+    <div class="navigation" [class.active]="menuOpen">
 
       <ul class="nav-links">
-
-        <li>
-          <a href="#home" (click)="closeMenu()">Home</a>
-        </li>
-
-        <li>
-          <a href="#about" (click)="closeMenu()">About</a>
-        </li>
-
-        <li>
-          <a href="#skills" (click)="closeMenu()">Skills</a>
-        </li>
-
-        <li>
-          <a href="#projects" (click)="closeMenu()">Projects</a>
-        </li>
-
-        <li>
-          <a href="#experience" (click)="closeMenu()">Experience</a>
-        </li>
-
-        <li>
-          <a href="#education" (click)="closeMenu()">Education</a>
-        </li>
-
-        <li>
-          <a href="#contact" (click)="closeMenu()">Contact</a>
-        </li>
-
+        <li><a href="#home" (click)="closeMenu()">Home</a></li>
+        <li><a href="#about" (click)="closeMenu()">About</a></li>
+        <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
+        <li><a href="#projects" (click)="closeMenu()">Projects</a></li>
+        <li><a href="#experience" (click)="closeMenu()">Experience</a></li>
+        <li><a href="#education" (click)="closeMenu()">Education</a></li>
+        <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
       </ul>
 
       <a
-        class="resume-button"
-        href="#resume"
-        (click)="closeMenu()">
-        Resume
-      </a>
+  class="hire-button"
+  href="#contact"
+  (click)="closeMenu()">
+  Hire Me →
+</a>
 
     </div>
 
   </div>
-
 </nav>

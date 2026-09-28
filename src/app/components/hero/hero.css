@@ -1,112 +1,236 @@
 .hero {
+  position: relative;
+
   min-height: calc(100vh - 80px);
+
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(79, 70, 229, 0.12),
+      transparent 35%
+    ),
+    #030617;
+
+  overflow: hidden;
+
   display: flex;
   align-items: center;
-  background-color: #f8fafc;
+}
+
+.hero-glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: 5%;
+  top: 10%;
+
+  background: rgba(99, 102, 241, 0.08);
+
+  filter: blur(100px);
+
+  border-radius: 50%;
+
+  pointer-events: none;
 }
 
 .hero-container {
-  width: 90%;
-  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+
+  width: 92%;
+  max-width: 1400px;
+
   margin: 0 auto;
+
+  padding: 100px 0;
 }
 
 .hero-content {
-  max-width: 750px;
+  max-width: 800px;
 }
 
 .intro {
-  color: #0284c7;
+  color: #8b5cf6;
+
   font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 600;
+
+  margin: 0 0 15px;
 }
 
 .hero h1 {
-  font-size: 58px;
-  margin: 0 0 10px;
-  color: #0f172a;
+  color: #f8fafc;
+
+  font-size: clamp(55px, 7vw, 90px);
+
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+
+  margin: 0 0 28px;
+
+  max-width: 850px;
+}
+
+.cursor {
+  color: #8b5cf6;
+
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+
 }
 
 .hero h2 {
-  font-size: 30px;
+  color: #f1f5f9;
+
+  font-size: clamp(25px, 3vw, 38px);
+
   margin: 0 0 25px;
-  color: #475569;
+
+  line-height: 1.2;
+}
+
+.hero h2 span {
+  background: linear-gradient(
+    90deg,
+    #a78bfa,
+    #6366f1
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .description {
-  max-width: 650px;
+  max-width: 750px;
+
+  color: #94a3b8;
+
   font-size: 18px;
-  line-height: 1.7;
-  color: #64748b;
+  line-height: 1.8;
+
   margin-bottom: 35px;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 15px;
+
+  gap: 16px;
+
+  margin-bottom: 40px;
 }
 
 .primary-button,
 .secondary-button {
-  padding: 13px 24px;
-  border-radius: 6px;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 25px;
+
+  border-radius: 9px;
+
+  font-size: 15px;
+  font-weight: 600;
+
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .primary-button {
-  background-color: #0284c7;
   color: white;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #4f46e5
+  );
+
+  box-shadow:
+    0 10px 30px rgba(79, 70, 229, 0.25);
 }
 
 .primary-button:hover {
-  background-color: #0369a1;
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 35px rgba(79, 70, 229, 0.4);
 }
 
 .secondary-button {
-  border: 2px solid #0284c7;
-  color: #0284c7;
+  color: #e2e8f0;
+
+  background: rgba(15, 23, 42, 0.5);
+
+  border: 1px solid #334155;
 }
 
 .secondary-button:hover {
-  background-color: #0284c7;
-  color: white;
+  transform: translateY(-3px);
+
+  border-color: #7c3aed;
 }
 
-.cursor {
-  color: #0284c7;
-  animation: blink 0.7s infinite;
+.social-links {
+  display: flex;
+  gap: 25px;
 }
 
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
+.social-links a {
+  color: #94a3b8;
 
-  50% {
-    opacity: 0;
-  }
+  font-size: 14px;
+  font-weight: 600;
 
-  100% {
-    opacity: 1;
-  }
+  text-decoration: none;
+
+  transition: color 0.3s ease;
 }
+
+.social-links a:hover {
+  color: #8b5cf6;
+}
+
+
+/* MOBILE */
 
 @media (max-width: 768px) {
 
   .hero {
     min-height: auto;
-    padding: 100px 0;
+  }
+
+  .hero-container {
+    padding: 90px 0;
   }
 
   .hero h1 {
-    font-size: 40px;
+    font-size: 52px;
+    letter-spacing: -2px;
   }
 
   .hero h2 {
-    font-size: 24px;
+    font-size: 27px;
   }
 
   .description {
@@ -120,31 +244,8 @@
 
   .primary-button,
   .secondary-button {
-    text-align: center;
+    width: 100%;
+    max-width: 280px;
   }
-  .availability {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  background-color: #e0f2fe;
-  color: #0369a1;
-
-  padding: 8px 14px;
-  border-radius: 20px;
-
-  font-size: 13px;
-  font-weight: bold;
-
-  margin-bottom: 25px;
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-
-  background-color: #16a34a;
-  border-radius: 50%;
-}
 
 }

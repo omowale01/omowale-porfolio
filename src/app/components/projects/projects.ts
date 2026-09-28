@@ -43,17 +43,7 @@ export class Projects {
         'https://github.com/omowale01/Automobile-software'
     },
 
-    {
-      title: 'Employee Compensation',
-      description:
-        'A TypeScript application demonstrating classes, inheritance, interfaces and object-oriented programming concepts.',
-      technologies: [
-        'TypeScript',
-        'Object-Oriented Programming',
-        'Interfaces',
-        'Inheritance'
-      ]
-    },
+  
 
     {
       title: 'Peru Baila Cultural Website',
