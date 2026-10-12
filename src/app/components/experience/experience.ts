@@ -17,9 +17,9 @@ interface ExperienceItem {
 export class Experience {
   experiences: ExperienceItem[] = [
     {
-      title: 'Web Developer Co-op Student',
+      title: 'Software Developer Co-op Student',
       company: 'Gravitit Tech Solutions',
-      location: 'Remote',
+      location: 'Moncton but fully Remote',
       date: 'April 2026 - June 2026',
       responsibilities: [
         'Developed and updated pages for a multilingual community website using Next.js and WordPress.',
@@ -78,6 +78,19 @@ export class Experience {
         'Collected and maintained accurate customer and activity information.',
         'Shared field updates with the main office to support program follow-up.',
         'Helped train team members on program information and customer communication.',
+      ],
+    },
+
+    {
+      title: 'Grocery Clerk',
+      company: 'Atlantic Superstore',
+      location: 'Saint John, NB',
+      date: 'March 2025 - Present',
+      responsibilities: [
+        '	Assist customers with product questions and direct requests to the appropriate department when needed.',
+        'Work with supervisors and colleagues to prioritize replenishment during busy shifts.',
+        'Maintain organized displays, accurate product placement, and safe handling practices.',
+        'Coordinate daily tasks with colleagues to keep stock available and support a consistent customer experience.'
       ],
     },
   ];
